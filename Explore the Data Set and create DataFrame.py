@@ -109,4 +109,3 @@ print (df.head())
 # Find the median of the 'NormalizedAnnualCompensation' column
 median_normalized_compensation = df['NormalizedAnnualCompensation'].median()
 print("Median of NormalizedAnnualCompensation:", median_normalized_compensation)
-
