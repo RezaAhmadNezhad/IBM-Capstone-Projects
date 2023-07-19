@@ -30,6 +30,10 @@ print("Number of unique countries in the 'Country' column:", unique_countries_co
 duplicate_rows_count = df.duplicated().sum()
 print("Number of duplicate rows in the DataFrame:", duplicate_rows_count)
 
+# how many duplicated values are there in the column Respondent?
+duplicate_in_Respondent = df['Respondent'].duplicated().sum()
+print ('Duplicated values in Respondent Column are:', duplicate_in_Respondent)
+
 # Remove the duplicate rows from the dataframe.
 df.drop_duplicates(inplace=True)
 
@@ -77,3 +81,4 @@ def calculate_normalized_compensation(row):
 # Apply the custom function to create the 'NormalizedAnnualCompensation' column
 df['NormalizedAnnualCompensation'] = df.apply(calculate_normalized_compensation, axis=1)
 print (df.head())
+
